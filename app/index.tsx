@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Image,ScrollView,Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Link } from 'expo-router';
@@ -31,5 +32,20 @@ export default function App(){
         </View>
       </ScrollView>
     </SafeAreaView>
+=======
+import { Text, View } from 'react-native'
+import React = require('react')
+import { StatusBar } from 'expo-status-bar'
+import { Link } from 'expo-router'
+
+
+export default function App(){
+  return(
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="font-pblack">Aora ADSO</Text>
+      <StatusBar style='auto' />
+      <Link href={'/home'} className='text-blue-500'>Go to Home</Link>
+    </View>
+>>>>>>> d5f7a298a8f4cfd9e1c6b83b1d3e43612d444527
   )
 }

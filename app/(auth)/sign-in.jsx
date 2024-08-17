@@ -9,4 +9,8 @@ const SignIn = () => {
   )
 }
 
+<<<<<<< HEAD
 export default SignIn
+=======
+export default SignIn;
+>>>>>>> d5f7a298a8f4cfd9e1c6b83b1d3e43612d444527
