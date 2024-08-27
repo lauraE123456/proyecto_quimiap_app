@@ -35,7 +35,7 @@ export default function App(){
               resizeMode="contain"
             />
           </View>
-          <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
+          <Text className="text-sm font-pregular text-green-400 mt-7 text-center">
             Where Creativity Meets Innovation: Embark on a Journey of Limitless
             Exploration with Aora
           </Text>
@@ -43,6 +43,7 @@ export default function App(){
             title="Continue with Email"
             handlePress={() => router.push('/sign-in')}
             containerStyles="w-full mt-7"
+            
           />
         </View>
       </ScrollView>
