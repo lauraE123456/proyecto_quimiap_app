@@ -22,19 +22,19 @@ const SignUp = () => {
   }
 
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView className="bg-white h-full">
       <ScrollView>
         <View className="w-full justify-center min-h-[83vh] px-4 my-6">
           <Image 
           source={images.logo} 
           resizeMode="contain"
-          className="w-[115px] h-[35px]"
+          className="w-[120px] h-[125px]"
           />
 
-          <Text className="text-2xl text-white text-semibold mt-10 font-semibold">Sign Up to Aora</Text>
+          <Text className="text-2xl text-black text-semibold mt-1 font-semibold">Registrate en QuimiApp</Text>
           
           <FormField 
-            title="Username"
+            title="Nombre"
             value={form.username}
             handleChangeText={(e) => setForm({ ...form,
               username: e})}
@@ -42,7 +42,7 @@ const SignUp = () => {
           />
 
           <FormField 
-            title="Email"
+            title="Correo Electronico"
             value={form.email}
             handleChangeText={(e) => setForm({ ...form,
               email: e})}
@@ -51,7 +51,7 @@ const SignUp = () => {
           />
 
           <FormField 
-            title="Password"
+            title="Contraseña"
             value={form.password}
             handleChangeText={(e) => setForm({ ...form,
               password: e})}
@@ -59,17 +59,17 @@ const SignUp = () => {
           />
 
           <CustomButton
-            title="Sign Up"
+            title="Registrarme"
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}
           />
 
           <View className="justify-center pt-5 flex-row gap-2">
-              <Text className="text-lg text-gray-100 font-pregular" >
-                Have an account already? 
+              <Text className="text-lg text-black font-pregular" >
+                Ya tienes una cuenta? 
               </Text>
-              <Link href="/sign-in" className="text-lg font-semibold text-secondary">Sign In</Link>
+              <Link href="/sign-in" className="text-lg font-pregular text-secondary-100">Ingresa</Link>
           </View>
         </View>
       </ScrollView>

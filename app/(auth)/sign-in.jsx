@@ -21,18 +21,18 @@ const SignIn = () => {
   }
 
   return (
-    <SafeAreaView className="bg-primary h-full">
+    <SafeAreaView className="bg-white h-full">
       <ScrollView>
         <View className="w-full justify-center min-h-[83vh] px-4 my-6">
           <Image 
           source={images.logo} 
           resizeMode="contain"
-          className="w-[115px] h-[35px]"
+          className="w-[120px] h-[125px]"
           />
 
-          <Text className="text-2xl text-white text-semibold mt-10 font-semibold">Log in to Aora</Text>
+          <Text className="text-2xl text-black text-semibold  mt-1 font-semibold">Inicia Sesión</Text>
           <FormField 
-            title="Email"
+            title="Correo Electronico"
             value={form.email}
             handleChangeText={(e) => setForm({ ...form,
               email: e})}
@@ -41,7 +41,7 @@ const SignIn = () => {
           />
 
           <FormField 
-            title="Password"
+            title="Contraseña"
             value={form.password}
             handleChangeText={(e) => setForm({ ...form,
               password: e})}
@@ -49,17 +49,17 @@ const SignIn = () => {
           />
 
           <CustomButton
-            title="Sign In"
+            title="Ingresar"
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}
           />
 
           <View className="justify-center pt-5 flex-row gap-2">
-              <Text className="text-lg text-gray-100 font-pregular" >
-                Don't have account?
+              <Text className="text-lg text-black font-pregular" >
+                No tienes cuenta?
               </Text>
-              <Link href="/sign-up" className="text-lg font-semibold text-secondary">Sign Up</Link>
+              <Link href="/sign-up" className="text-lg font-pregular text-secondary-100">Registrate</Link>
           </View>
         </View>
       </ScrollView>
