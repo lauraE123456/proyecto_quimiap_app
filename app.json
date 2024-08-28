@@ -14,14 +14,14 @@
     },
     "ios": {
       "supportsTablet": true,
-      "package": "com.jsm.quimiap"
+      "package": "com.jsm.aora"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.jsm.quimiap"
+      "package": "com.jsm.aora"
     },
     "web": {
       "bundler": "metro",

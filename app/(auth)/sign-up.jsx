@@ -8,14 +8,14 @@ import { Link } from 'expo-router'
 
 import { createUser } from '../../lib/appwrite'
 
+
 const SignUp = () => {
 
   const [form, setForm] = useState({
     username:'',
     email:'',
     password:''
-  }
-  )
+  })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -52,7 +52,7 @@ const SignUp = () => {
           <Text className="text-2xl text-black text-semibold mt-1 font-semibold">Registrate en QuimiApp</Text>
           
           <FormField 
-            title="Nombre"
+            title="Username"
             value={form.username}
             handleChangeText={(e) => setForm({ ...form,
               username: e})}
@@ -60,7 +60,7 @@ const SignUp = () => {
           />
 
           <FormField 
-            title="Correo Electronico"
+            title="Email"
             value={form.email}
             handleChangeText={(e) => setForm({ ...form,
               email: e})}
@@ -69,7 +69,7 @@ const SignUp = () => {
           />
 
           <FormField 
-            title="Contraseña"
+            title="Password"
             value={form.password}
             handleChangeText={(e) => setForm({ ...form,
               password: e})}
@@ -77,7 +77,7 @@ const SignUp = () => {
           />
 
           <CustomButton
-            title="Registrarme"
+            title="Sign Up"
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}
@@ -87,7 +87,7 @@ const SignUp = () => {
               <Text className="text-lg text-black font-pregular" >
                 Ya tienes una cuenta? 
               </Text>
-              <Link href="/sign-in" className="text-lg font-pregular text-secondary-100">Ingresa</Link>
+              <Link href="/sign-in" className="text-lg font-pregular text-secondary-100">Sign In</Link>
           </View>
         </View>
       </ScrollView>

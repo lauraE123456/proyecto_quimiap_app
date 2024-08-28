@@ -1,10 +1,10 @@
-import { View, Text, ScrollView, Image } from 'react-native'
+import { View, Text, ScrollView, Image, Alert } from 'react-native'
 import React, {useState} from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import {images} from '../../constants'
 import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
-import { Link } from 'expo-router'
+import { Link, router } from 'expo-router'
 
 import { signIn } from '../../lib/appwrite'
 
@@ -50,7 +50,7 @@ const SignIn = () => {
 
           <Text className="text-2xl text-black text-semibold  mt-1 font-semibold">Inicia Sesión</Text>
           <FormField 
-            title="Correo Electronico"
+            title="Email"
             value={form.email}
             handleChangeText={(e) => setForm({ ...form,
               email: e})}
@@ -59,7 +59,7 @@ const SignIn = () => {
           />
 
           <FormField 
-            title="Contraseña"
+            title="Password"
             value={form.password}
             handleChangeText={(e) => setForm({ ...form,
               password: e})}
@@ -67,7 +67,7 @@ const SignIn = () => {
           />
 
           <CustomButton
-            title="Ingresar"
+            title="Sign in"
             handlePress={submit}
             containerStyles="mt-7"
             isLoading={isSubmitting}
@@ -77,7 +77,7 @@ const SignIn = () => {
               <Text className="text-lg text-black font-pregular" >
                 No tienes cuenta?
               </Text>
-              <Link href="/sign-up" className="text-lg font-pregular text-secondary-100">Registrate</Link>
+              <Link href="/sign-up" className="text-lg font-pregular text-secondary-100">Sing up</Link>
           </View>
         </View>
       </ScrollView>
