@@ -7,13 +7,13 @@ const AuthLayout = () => {
     <>
       <Stack>
         <Stack.Screen
-          name="sing-in"
+          name="sign-in"
           options={{
             headerShown:false
           }}
         />
         <Stack.Screen
-          name="sing-up"
+          name="sign-up"
           options={{
             headerShown:false
           }}

@@ -6,7 +6,7 @@ import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
 import { Link, router } from 'expo-router'
 
-import { signIn } from '../../lib/appwrite'
+import { getCurrentUser, signIn } from '../../lib/appwrite'
 
 const SignIn = () => {
 
@@ -20,20 +20,23 @@ const SignIn = () => {
 
   const submit = async () =>{
     if(!form.email || !form.password){
-      Alert.alert('Error','Por favor complete todos los datos')
+      Alert.alert('Error','Por favor complete todos los datos');
     }
 
     setIsSubmitting(true);
 
     try{  
-      await signIn(form.email,form.password)
-
-        
-      router.replace('/home')
+      await signIn(form.email,form.password);
+      const result = await getCurrentUser();
+      setUser(result);
+      setIsLogged(true);
+      
+      Alert.alert("Success", "User sifned in successfully");
+      router.replace('/home');
     }catch (error){
-      Alert.alert('Error',error.message)
+      Alert.alert('Error',error.message);
     }finally{
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   }
 
@@ -77,7 +80,7 @@ const SignIn = () => {
               <Text className="text-lg text-black font-pregular" >
                 No tienes cuenta?
               </Text>
-              <Link href="/sign-up" className="text-lg font-pregular text-secondary-100">Sing up</Link>
+              <Link href="/sign-up" className="text-lg font-pregular text-secondary-100">Sign up</Link>
           </View>
         </View>
       </ScrollView>
